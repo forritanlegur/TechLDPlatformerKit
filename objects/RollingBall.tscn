@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://dnr7mqx1m7qoq"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_at6x3"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_kpua2"]
+
+[node name="RollingBall" type="RigidBody3D"]
+disable_mode = 2
+inertia = Vector3(1, 1, 1)
+can_sleep = false
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("SphereShape3D_at6x3")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("SphereMesh_kpua2")
