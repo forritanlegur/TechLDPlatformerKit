@@ -1,11 +1,10 @@
-[gd_scene load_steps=36 format=3 uid="uid://biey4d86apoi1"]
+[gd_scene load_steps=39 format=3 uid="uid://biey4d86apoi1"]
 
 [ext_resource type="Environment" uid="uid://bqnqgflivjvue" path="res://scenes/main-environment.tres" id="1_uue0m"]
 [ext_resource type="PackedScene" uid="uid://dl2ed4gkybggf" path="res://objects/player.tscn" id="2_m1uua"]
 [ext_resource type="Script" path="res://scripts/view.gd" id="3_yd2jv"]
 [ext_resource type="PackedScene" uid="uid://bpharv43ulngb" path="res://objects/platform_moving.tscn" id="4_v208y"]
 [ext_resource type="PackedScene" uid="uid://bdm3quh21j64k" path="res://objects/platform_large.tscn" id="5_iju2y"]
-[ext_resource type="PackedScene" uid="uid://bs65o07otxbmm" path="res://objects/moving_object_path_3d.tscn" id="6_3d80n"]
 [ext_resource type="PackedScene" uid="uid://dhxok27jxvik8" path="res://objects/flag.tscn" id="7_465js"]
 [ext_resource type="PackedScene" uid="uid://dwvhgrcyestak" path="res://objects/trap_spikes.tscn" id="8_wplky"]
 [ext_resource type="PackedScene" uid="uid://g73m8k0j7lyo" path="res://objects/button.tscn" id="9_hysqm"]
@@ -29,18 +28,16 @@
 [ext_resource type="Texture2D" uid="uid://dm50aa4qogm65" path="res://sprites/button_rectangle_depth_gloss.png" id="24_iquuu"]
 [ext_resource type="PackedScene" uid="uid://dbr3dh46cbskt" path="res://objects/wall.tscn" id="25_0h674"]
 [ext_resource type="PackedScene" uid="uid://dnr7mqx1m7qoq" path="res://objects/RollingBall.tscn" id="26_d16p4"]
+[ext_resource type="Script" path="res://objects/rolling_ball_script.gd" id="27_g6mpt"]
 [ext_resource type="PackedScene" uid="uid://bivop3qylkpeo" path="res://objects/SnowFloor.tscn" id="27_j5j6l"]
+[ext_resource type="PackedScene" uid="uid://bcbi0wonwe8k2" path="res://TSCN/Collisions_SnowSlope.tscn" id="31_okhxj"]
+[ext_resource type="PackedScene" uid="uid://c8hegxuxj5252" path="res://TSCN/Collision_SnowHigh.tscn" id="31_xt1xd"]
+[ext_resource type="PackedScene" uid="uid://cymo0hied8201" path="res://TSCN/Collision_SnowLow.tscn" id="32_uferc"]
+[ext_resource type="PackedScene" uid="uid://dkn556o3udofk" path="res://TSCN/Collision_SnowOverhang.tscn" id="33_la36d"]
 
 [sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_u8ojw"]
 auto_exposure_scale = 0.75
 dof_blur_far_distance = 0.01
-
-[sub_resource type="Curve3D" id="Curve3D_5n82a"]
-_data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -25.545, 2.4, -1.4, 0, 0, 0, 0, 0, 0, -19, 2.4, -1.4),
-"tilts": PackedFloat32Array(0, 0)
-}
-point_count = 2
 
 [sub_resource type="LabelSettings" id="LabelSettings_ri8jt"]
 font = ExtResource("22_lcrcy")
@@ -96,12 +93,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.9563, 2.11817, -1.1764)
 [node name="platform-large2" parent="World" instance=ExtResource("5_iju2y")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -34.9558, 2.20127, -8.90485)
 
-[node name="moving_object_path" parent="World" node_paths=PackedStringArray("object_to_move") instance=ExtResource("6_3d80n")]
-curve = SubResource("Curve3D_5n82a")
-object_to_move = NodePath("../platform-moving")
-is_on_from_start = false
-ping_pong = true
-
 [node name="flag" parent="World" instance=ExtResource("7_465js")]
 transform = Transform3D(0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, 0.707107, -35.0779, 2.7273, -8.92648)
 
@@ -111,9 +102,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -34.578, 2.71517, -4.91552)
 [node name="trap-spikes2" parent="World" instance=ExtResource("8_wplky")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -35.3781, 2.71517, -4.91552)
 
-[node name="button" parent="World" node_paths=PackedStringArray("target") instance=ExtResource("9_hysqm")]
+[node name="button" parent="World" instance=ExtResource("9_hysqm")]
 transform = Transform3D(0.997099, 0, 0.0761099, 0, 1, 0, -0.0761099, 0, 0.997099, -20.392, 4.90807, 6.39096)
-target = NodePath("../moving_object_path")
 
 [node name="button2" parent="World" node_paths=PackedStringArray("target") instance=ExtResource("9_hysqm")]
 transform = Transform3D(0.999991, 0, 0.00434586, 0, 1, 0, -0.00434586, 0, 0.999991, -16.3423, 2.64299, 0.277611)
@@ -165,7 +155,7 @@ transform = Transform3D(0.86084, 0, -0.508876, 0, 1, 0, 0.508876, 0, 0.86084, -5
 transform = Transform3D(0.997325, 0, 0.073099, 0, 1, 0, -0.073099, 0, 0.997325, -20.3597, 4.41057, 6.41009)
 
 [node name="platform-falling" parent="World" instance=ExtResource("15_3cext")]
-transform = Transform3D(0.989985, 0, -0.141178, 0, 1, 0, 0.141178, 0, 0.989985, -9.67817, 1.89327, -0.633746)
+transform = Transform3D(0.989726, 0.000372024, -0.142982, -1.87088e-05, 0.999997, 0.00247245, 0.142982, -0.00244437, 0.989723, -9.67817, 1.89327, -0.633746)
 
 [node name="platform-grass-large-round" parent="World" instance=ExtResource("16_ju3ea")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.498435, 1.04456, 6.24435)
@@ -328,7 +318,8 @@ transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -30.5423, 2.65714, 0.622322)
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -30.5423, 2.65714, -3.41335)
 
 [node name="RollingBall" parent="." instance=ExtResource("26_d16p4")]
-transform = Transform3D(0.999926, 0, 0.0121821, 0, 1, 0, -0.0121821, 0, 0.999926, -7.01739, 1.94316, 12.882)
+transform = Transform3D(0.999926, 0, 0.0121821, 0, 1, 0, -0.0121821, 0, 0.999926, -7.65387, 5.50613, 22.3222)
+script = ExtResource("27_g6mpt")
 
 [node name="SnowFloor" parent="." instance=ExtResource("27_j5j6l")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.95261, 0, 17.7427)
@@ -377,6 +368,30 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.5965, 0.865415, 45.2683)
 
 [node name="tree-pine-snow-small6" parent="." instance=ExtResource("20_1ndbn")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.3777, 0.865415, 41.7316)
+
+[node name="block-snow-overhang-large-tall2" parent="." instance=ExtResource("31_xt1xd")]
+transform = Transform3D(1, 0, 0, 0, 1.5, 0, 0, 0, 1, -7.41163, 0.865415, 15.947)
+
+[node name="block-snow-overhang-large2" parent="." instance=ExtResource("32_uferc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.42341, 0.865415, 17.81)
+
+[node name="block-snow-overhang-large-tall3" parent="." instance=ExtResource("31_xt1xd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.49717, 0.865415, 15.9519)
+
+[node name="block-snow-overhang-edge2" parent="." instance=ExtResource("33_la36d")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -7.17762, 1.86542, 14.6175)
+
+[node name="block-snow-overhang-large-slope2" parent="." instance=ExtResource("31_okhxj")]
+transform = Transform3D(-1, 0, 1.50996e-07, 0, 1, 0, -1.50996e-07, 0, -1, -1.19646, 0.865415, 25.3515)
+
+[node name="block-snow-overhang-large3" parent="." instance=ExtResource("32_uferc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.21251, 0.626565, 27.3326)
+
+[node name="block-snow-overhang-edge3" parent="." instance=ExtResource("33_la36d")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -4.13597, 1.3387, 16.0719)
+
+[node name="block-snow-overhang-large-tall4" parent="." instance=ExtResource("31_xt1xd")]
+transform = Transform3D(1, 0, 0, 0, 1.5, 0, 0, 0, 1, -7.46882, 0.865415, 22.1709)
 
 [connection signal="coin_collected" from="Player" to="HUD" method="_on_coin_collected"]
 [connection signal="reached_goal" from="Player" to="HUD" method="_on_player_reached_goal"]

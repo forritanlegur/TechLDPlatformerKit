@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://dkn556o3udofk"]
+
+[ext_resource type="PackedScene" uid="uid://dt3vqw0tvlu8x" path="res://models/props/block-snow-overhang-edge.glb" id="1_obvdg"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_aka8m"]
+
+[node name="block-snow-overhang-edge2" instance=ExtResource("1_obvdg")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="block-snow-overhang-edge" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="block-snow-overhang-edge/StaticBody3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+shape = SubResource("BoxShape3D_aka8m")
