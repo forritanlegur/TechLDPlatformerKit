@@ -318,7 +318,7 @@ transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -30.5423, 2.65714, 0.622322)
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -30.5423, 2.65714, -3.41335)
 
 [node name="RollingBall" parent="." instance=ExtResource("26_d16p4")]
-transform = Transform3D(0.999926, 0, 0.0121821, 0, 1, 0, -0.0121821, 0, 0.999926, -7.65387, 5.50613, 22.3222)
+transform = Transform3D(0.999926, 0, 0.0121821, 0, 1, 0, -0.0121821, 0, 0.999926, -2.44193, 1.58506, 16.0666)
 script = ExtResource("27_g6mpt")
 
 [node name="SnowFloor" parent="." instance=ExtResource("27_j5j6l")]
