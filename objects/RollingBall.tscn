@@ -26,6 +26,7 @@ rim_texture = SubResource("MeshTexture_yhdnq")
 disable_receive_shadows = true
 
 [node name="RollingBall" type="RigidBody3D"]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
 disable_mode = 2
 collision_layer = 4
 collision_mask = 7
