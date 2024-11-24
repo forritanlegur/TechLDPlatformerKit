@@ -69,6 +69,8 @@ camera_attributes = SubResource("CameraAttributesPractical_u8ojw")
 
 [node name="Player" parent="." node_paths=PackedStringArray("view") instance=ExtResource("2_m1uua")]
 transform = Transform3D(-0.436802, 0, -0.899558, 0, 1, 0, 0.899558, 0, -0.436802, 0, 1.86931, 6.61307)
+collision_layer = 2
+collision_mask = 3
 view = NodePath("../View")
 
 [node name="View" type="Node3D" parent="." node_paths=PackedStringArray("target") groups=["View"]]
@@ -178,7 +180,7 @@ transform = Transform3D(-0.294924, 0, 0.955521, 0, 1, 0, -0.955521, 0, -0.294924
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.54416, 2.55254, 1.27727)
 
 [node name="cube8" parent="World" instance=ExtResource("18_oll1d")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.4085, 3.55878, 17.7348)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.1766, 3.55878, 17.7348)
 
 [node name="cube9" parent="World" instance=ExtResource("18_oll1d")]
 transform = Transform3D(1.27593, -0.401864, 0.422933, 0.471408, 1.30937, -0.178025, -0.343721, 0.304009, 1.32582, -17.6588, 3.82283, 16.2076)
@@ -204,6 +206,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.5544, 0.865415, 17.3154)
 [node name="Sun" type="DirectionalLight3D" parent="."]
 transform = Transform3D(-0.422618, -0.694272, 0.582563, 0, 0.642788, 0.766044, -0.906308, 0.323744, -0.271654, 0, 0, 0)
 light_color = Color(0.594397, 0.877198, 1, 1)
+light_energy = 0.5
 shadow_enabled = true
 shadow_opacity = 0.75
 
@@ -325,7 +328,7 @@ transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -30.5423, 2.65714, 0.622322)
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -30.5423, 2.65714, -3.41335)
 
 [node name="RollingBall" parent="." instance=ExtResource("26_d16p4")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.975611, 3.05322, 16.8301)
+transform = Transform3D(0.999926, 0, 0.0121821, 0, 1, 0, -0.0121821, 0, 0.999926, -7.01739, 1.94316, 12.882)
 
 [node name="SnowFloor" parent="." instance=ExtResource("27_j5j6l")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.95261, 0, 17.7427)

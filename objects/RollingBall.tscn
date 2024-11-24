@@ -1,16 +1,42 @@
-[gd_scene load_steps=3 format=3 uid="uid://dnr7mqx1m7qoq"]
+[gd_scene load_steps=7 format=3 uid="uid://dnr7mqx1m7qoq"]
+
+[ext_resource type="Texture2D" uid="uid://ba878jdlfksiw" path="res://models/core_models/Textures/Snow.png" id="1_rjnj1"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_at6x3"]
 
 [sub_resource type="SphereMesh" id="SphereMesh_kpua2"]
 
+[sub_resource type="SphereMesh" id="SphereMesh_2r7tp"]
+
+[sub_resource type="MeshTexture" id="MeshTexture_yhdnq"]
+mesh = SubResource("SphereMesh_2r7tp")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cep2q"]
+diffuse_mode = 1
+specular_mode = 2
+disable_fog = true
+albedo_texture = ExtResource("1_rjnj1")
+metallic_specular = 0.0
+roughness = 0.0
+emission_enabled = true
+emission = Color(0.464492, 0.646286, 0.780785, 1)
+rim_enabled = true
+rim_tint = 1.0
+rim_texture = SubResource("MeshTexture_yhdnq")
+disable_receive_shadows = true
+
 [node name="RollingBall" type="RigidBody3D"]
 disable_mode = 2
+collision_layer = 4
+collision_mask = 7
 inertia = Vector3(1, 1, 1)
 can_sleep = false
+linear_damp = 1.0
+angular_damp = 1.0
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("SphereShape3D_at6x3")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 mesh = SubResource("SphereMesh_kpua2")
+surface_material_override/0 = SubResource("StandardMaterial3D_cep2q")
