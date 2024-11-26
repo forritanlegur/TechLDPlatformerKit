@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://d4uia7cfn1um"]
+
+[ext_resource type="PackedScene" uid="uid://s7trom0cwf3v" path="res://models/props/block-snow-long.glb" id="1_fmx7y"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_cr3g4"]
+size = Vector3(1.83179, 0.996582, 1)
+
+[node name="block-snow-long2" instance=ExtResource("1_fmx7y")]
+
+[node name="block-snow-long" parent="." index="0"]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 0, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="block-snow-long" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="block-snow-long/StaticBody3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.057251, 0.483154, 0)
+shape = SubResource("BoxShape3D_cr3g4")
