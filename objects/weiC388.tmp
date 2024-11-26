@@ -1,0 +1,33 @@
+[gd_scene load_steps=6 format=3 uid="uid://vj2cbfwnk8v7"]
+
+[ext_resource type="PackedScene" uid="uid://d00dv1q4ev3uq" path="res://models/prototyping/models/button-floor-square.glb" id="1_r8ett"]
+[ext_resource type="PackedScene" uid="uid://ddyao5skytgvu" path="res://models/prototyping/models/floor-thick.glb" id="2_7w7p4"]
+[ext_resource type="Script" path="res://objects/WeighSnowball.gd" id="3_q0ap0"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_k8cvs"]
+size = Vector3(1.48431, 1.39661, 1.51807)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_oncbv"]
+size = Vector3(1, 0.423157, 1)
+
+[node name="WeightBall" instance=ExtResource("1_r8ett")]
+
+[node name="Area3D" type="Area3D" parent="button-floor-square/button" index="0" node_paths=PackedStringArray("platform")]
+collision_layer = 255
+collision_mask = 7
+script = ExtResource("3_q0ap0")
+platform = NodePath("../../../floor-thick2")
+platform_move_speed = null
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="button-floor-square/button/Area3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0039978, 0.645569, -0.00610352)
+shape = SubResource("BoxShape3D_k8cvs")
+
+[node name="floor-thick2" parent="." index="2" instance=ExtResource("2_7w7p4")]
+transform = Transform3D(2, 0, 0, 0, 1, 0, 0, 0, 2, -3.65934, 0, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="floor-thick2" index="1"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="floor-thick2/StaticBody3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0602112, 0)
+shape = SubResource("BoxShape3D_oncbv")

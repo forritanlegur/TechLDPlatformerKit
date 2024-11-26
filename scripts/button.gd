@@ -1,7 +1,7 @@
 extends Node3D
 @export var target : Node3D
 @export var pressed_by_default : bool
-@onready var animation_player: AnimationPlayer = $AnimationPlayer
+@onready var animation_player: AnimationPlayer = $AnimationPlayer 
 var button_state : bool = false
 @onready var cooldown_timer: Timer = $CooldownTimer
 

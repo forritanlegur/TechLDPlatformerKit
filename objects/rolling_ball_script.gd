@@ -18,7 +18,11 @@ var scale_increment = 0.05
 var current_scale = min_scale
 
 #The weight to be used by the scale
-var snowballWeight = 1
+@export var snowballWeight = 1
+
+func _ready():
+	# Add this ball to the "snowballs" group
+	add_to_group("snowballs")
 
 func _process(delta):
 	# get the current velocity of the RigidBody3D
@@ -36,9 +40,9 @@ func _process(delta):
 	collision_shape.scale = Vector3(current_scale, current_scale, current_scale)
 
 	#debugging to test some things
-	print_debug("current scale ", current_scale)
-	print_debug("current velocity ", velocity)
+	#print_debug("current scale ", current_scale)
+	#print_debug("current velocity ", velocity)
 	
 	#updating the weight and debugging it 
 	snowballWeight = round(current_scale*10)
-	print_debug("the snowball is weighing : ", snowballWeight, " kgs")
+	#print_debug("the snowball is weighing : ", snowballWeight, " kgs")
