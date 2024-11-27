@@ -167,6 +167,7 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="Icon" type="TextureRect" parent="HUD/Control"]
+visible = false
 layout_mode = 0
 offset_left = 57.0
 offset_top = 67.0
@@ -176,6 +177,7 @@ scale = Vector2(0.2, 0.2)
 texture = ExtResource("20_lslet")
 
 [node name="x" type="Label" parent="HUD/Control"]
+visible = false
 layout_mode = 0
 offset_left = 112.0
 offset_top = 64.0
@@ -200,6 +202,7 @@ label_settings = SubResource("LabelSettings_ri8jt")
 
 [node name="CoinsLabel" type="Label" parent="HUD/Control"]
 unique_name_in_owner = true
+visible = false
 layout_mode = 0
 offset_left = 144.0
 offset_top = 64.0

@@ -16,9 +16,9 @@ var pause_timer : bool
 func _ready() -> void:
 	level_complete.visible = false
 	play_again_button.visible = false
-	time_label.visible = false
-	time_name_label.visible = false
-
+	time_label.visible = true
+	time_name_label.visible = true
+	speed_run = true
 func _process(delta: float) -> void:
 	if speed_run and not pause_timer:
 		time_label.visible = true
