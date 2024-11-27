@@ -46,3 +46,11 @@ func _process(delta):
 	#updating the weight and debugging it 
 	snowballWeight = round(current_scale*10)
 	#print_debug("the snowball is weighing : ", snowballWeight, " kgs")
+
+func resetSize():
+	#reset the size of the snowball back to normal
+	print_debug("Snowball Size Reset!")
+	mesh_instance.scale = Vector3(min_scale, min_scale, min_scale)
+	collision_shape.scale = Vector3(min_scale, min_scale, min_scale)
+	current_scale = min_scale
+	snowballWeight = 1

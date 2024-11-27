@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://bb63i6eohxe75"]
+
+[ext_resource type="PackedScene" uid="uid://qowb4ewnm0d0" path="res://models/prototyping/models/indicator-round-b.glb" id="1_3v8iy"]
+[ext_resource type="Script" path="res://objects/Resetsnowball.gd" id="2_846wi"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_yhgtq"]
+height = 0.498504
+
+[node name="Resetter" type="Node3D"]
+
+[node name="indicator-round-b2" parent="." instance=ExtResource("1_3v8iy")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0.0189238, -1.19209e-07, 0.000574708)
+
+[node name="Area3D" type="Area3D" parent="indicator-round-b2"]
+collision_layer = 7
+collision_mask = 7
+script = ExtResource("2_846wi")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="indicator-round-b2/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.230182, 0)
+shape = SubResource("CylinderShape3D_yhgtq")

@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://kxlanit681hg" path="res://models/props/platform.glb" id="1_q5uxh"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_t6c06"]
-size = Vector3(1, 0.196777, 1)
+size = Vector3(1, 0.145752, 1)
 
 [node name="platform2" instance=ExtResource("1_q5uxh")]
 
@@ -13,5 +13,5 @@ transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
 [node name="StaticBody3D" type="StaticBody3D" parent="platform" index="0"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="platform/StaticBody3D" index="0"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.105225, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0797124, 0)
 shape = SubResource("BoxShape3D_t6c06")
