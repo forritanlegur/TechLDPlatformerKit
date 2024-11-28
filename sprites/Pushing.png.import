@@ -2,9 +2,9 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://upm1ehcbxwff"
-path.s3tc="res://.godot/imported/sign.png-e58b98a164fd7c5f265ed07d75c251ac.s3tc.ctex"
-path.etc2="res://.godot/imported/sign.png-e58b98a164fd7c5f265ed07d75c251ac.etc2.ctex"
+uid="uid://cigfbeylva82o"
+path.s3tc="res://.godot/imported/Pushing.png-5f4a7e49a2a8bccd118e0ddef0a1a508.s3tc.ctex"
+path.etc2="res://.godot/imported/Pushing.png-5f4a7e49a2a8bccd118e0ddef0a1a508.etc2.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
@@ -12,8 +12,8 @@ metadata={
 
 [deps]
 
-source_file="res://models/props/sign.png"
-dest_files=["res://.godot/imported/sign.png-e58b98a164fd7c5f265ed07d75c251ac.s3tc.ctex", "res://.godot/imported/sign.png-e58b98a164fd7c5f265ed07d75c251ac.etc2.ctex"]
+source_file="res://sprites/Pushing.png"
+dest_files=["res://.godot/imported/Pushing.png-5f4a7e49a2a8bccd118e0ddef0a1a508.s3tc.ctex", "res://.godot/imported/Pushing.png-5f4a7e49a2a8bccd118e0ddef0a1a508.etc2.ctex"]
 
 [params]
 
