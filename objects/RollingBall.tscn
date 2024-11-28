@@ -8,7 +8,7 @@
 
 [sub_resource type="SphereMesh" id="SphereMesh_2r7tp"]
 
-[sub_resource type="MeshTexture" id="MeshTexture_yhdnq"]
+[sub_resource type="MeshTexture" id="MeshTexture_14sfi"]
 mesh = SubResource("SphereMesh_2r7tp")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cep2q"]
@@ -22,7 +22,7 @@ emission_enabled = true
 emission = Color(0.464492, 0.646286, 0.780785, 1)
 rim_enabled = true
 rim_tint = 1.0
-rim_texture = SubResource("MeshTexture_yhdnq")
+rim_texture = SubResource("MeshTexture_14sfi")
 disable_receive_shadows = true
 
 [node name="RollingBall" type="RigidBody3D"]

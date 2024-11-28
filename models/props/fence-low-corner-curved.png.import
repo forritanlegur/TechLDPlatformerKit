@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://cod3470cl6cxf"
 path.s3tc="res://.godot/imported/fence-low-corner-curved.png-4159fd6b099a92293c81b384fad1496f.s3tc.ctex"
+path.etc2="res://.godot/imported/fence-low-corner-curved.png-4159fd6b099a92293c81b384fad1496f.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://models/props/fence-low-corner-curved.png"
-dest_files=["res://.godot/imported/fence-low-corner-curved.png-4159fd6b099a92293c81b384fad1496f.s3tc.ctex"]
+dest_files=["res://.godot/imported/fence-low-corner-curved.png-4159fd6b099a92293c81b384fad1496f.s3tc.ctex", "res://.godot/imported/fence-low-corner-curved.png-4159fd6b099a92293c81b384fad1496f.etc2.ctex"]
 
 [params]
 

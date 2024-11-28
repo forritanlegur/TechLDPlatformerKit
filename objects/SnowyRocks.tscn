@@ -1,0 +1,12 @@
+[gd_scene load_steps=4 format=3 uid="uid://bwn5i6mbqudw2"]
+
+[ext_resource type="PackedScene" uid="uid://dmequtx2oso1f" path="res://models/props/rocks.glb" id="1_7e17g"]
+[ext_resource type="Texture2D" uid="uid://ba878jdlfksiw" path="res://models/core_models/Textures/Snow.png" id="2_yj832"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dsfdy"]
+albedo_texture = ExtResource("2_yj832")
+
+[node name="rocks2" instance=ExtResource("1_7e17g")]
+
+[node name="rocks" parent="." index="0"]
+material_override = SubResource("StandardMaterial3D_dsfdy")

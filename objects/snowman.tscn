@@ -1,0 +1,74 @@
+[gd_scene load_steps=13 format=3 uid="uid://bx1a2r34o0tvn"]
+
+[ext_resource type="Texture2D" uid="uid://ba878jdlfksiw" path="res://models/core_models/Textures/Snow.png" id="1_aha78"]
+[ext_resource type="PackedScene" uid="uid://bddgf7n531bdn" path="res://models/props/fence-low-straight.glb" id="2_4ol1s"]
+[ext_resource type="PackedScene" uid="uid://dk1inne27lf4o" path="res://models/prototyping/models/hat-cap.glb" id="2_lqbit"]
+[ext_resource type="PackedScene" uid="uid://dmequtx2oso1f" path="res://models/props/rocks.glb" id="3_5qba7"]
+[ext_resource type="Texture2D" uid="uid://nnu505imalpn" path="res://models/prototyping/models/orange.png" id="4_dglns"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_h7c8s"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_q4bij"]
+
+[sub_resource type="MeshTexture" id="MeshTexture_yhdnq"]
+mesh = SubResource("SphereMesh_q4bij")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_a1tjw"]
+diffuse_mode = 1
+specular_mode = 2
+disable_fog = true
+albedo_texture = ExtResource("1_aha78")
+metallic_specular = 0.0
+roughness = 0.0
+emission_enabled = true
+emission = Color(0.464492, 0.646286, 0.780785, 1)
+rim_enabled = true
+rim_tint = 1.0
+rim_texture = SubResource("MeshTexture_yhdnq")
+disable_receive_shadows = true
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_qywmo"]
+size = Vector3(1, 1.99207, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3i581"]
+albedo_texture = ExtResource("4_dglns")
+
+[sub_resource type="PrismMesh" id="PrismMesh_2jql7"]
+
+[node name="Snowman" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0, 0, 0)
+mesh = SubResource("SphereMesh_h7c8s")
+surface_material_override/0 = SubResource("StandardMaterial3D_a1tjw")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.496033, 0)
+shape = SubResource("BoxShape3D_qywmo")
+
+[node name="fence-low-straight2" parent="MeshInstance3D/StaticBody3D" instance=ExtResource("2_4ol1s")]
+transform = Transform3D(0.441556, -0.234582, 0, 0.234582, 0.441556, 0, 0, 0, 0.5, 0.551682, 0.228913, -0.12592)
+
+[node name="fence-low-straight3" parent="MeshInstance3D/StaticBody3D" instance=ExtResource("2_4ol1s")]
+transform = Transform3D(-0.340872, -0.365796, 0, 0.365796, -0.340872, 0, 0, 0, 0.5, -0.452818, 0.228913, -0.12592)
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0.494729, 0)
+mesh = SubResource("SphereMesh_h7c8s")
+surface_material_override/0 = SubResource("StandardMaterial3D_a1tjw")
+
+[node name="hat-cap2" parent="." instance=ExtResource("2_lqbit")]
+transform = Transform3D(-0.388229, -4.09782e-08, 1.93185, -0.349635, 0.970448, -0.124912, -1.40607, -0.241312, -0.502341, 0.0132658, 0.631476, 0.0424421)
+
+[node name="rocks2" parent="." instance=ExtResource("3_5qba7")]
+transform = Transform3D(0.1, 0, 0, 0, 0.05, -0.0866025, 0, 0.0866025, 0.05, 0.115714, 0.575858, 0.200747)
+
+[node name="rocks3" parent="." instance=ExtResource("3_5qba7")]
+transform = Transform3D(0.0784224, -0.0310239, 0.0537349, 0.0620477, 0.0392112, -0.0679158, 0, 0.0866025, 0.05, -0.0741145, 0.575858, 0.222387)
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="."]
+transform = Transform3D(-0.000596894, 0.0141363, -0.0493785, -0.0999982, -8.43799e-05, 0.000294742, 0, 0.0888828, 0.00785361, 0.0365128, 0.510061, 0.275017)
+material_override = SubResource("StandardMaterial3D_3i581")
+mesh = SubResource("PrismMesh_2jql7")

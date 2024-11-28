@@ -2,9 +2,9 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cqovpiux7xy8n"
-path.s3tc="res://.godot/imported/indicator-round-a.png-656e8670a375b6cfdc588fa7498d3029.s3tc.ctex"
-path.etc2="res://.godot/imported/indicator-round-a.png-656e8670a375b6cfdc588fa7498d3029.etc2.ctex"
+uid="uid://nnu505imalpn"
+path.s3tc="res://.godot/imported/orange.png-b889dd5cd81d9ed7561d44d8c7a9b7e5.s3tc.ctex"
+path.etc2="res://.godot/imported/orange.png-b889dd5cd81d9ed7561d44d8c7a9b7e5.etc2.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
@@ -12,8 +12,8 @@ metadata={
 
 [deps]
 
-source_file="res://models/prototyping/models/indicator-round-a.png"
-dest_files=["res://.godot/imported/indicator-round-a.png-656e8670a375b6cfdc588fa7498d3029.s3tc.ctex", "res://.godot/imported/indicator-round-a.png-656e8670a375b6cfdc588fa7498d3029.etc2.ctex"]
+source_file="res://models/prototyping/models/orange.png"
+dest_files=["res://.godot/imported/orange.png-b889dd5cd81d9ed7561d44d8c7a9b7e5.s3tc.ctex", "res://.godot/imported/orange.png-b889dd5cd81d9ed7561d44d8c7a9b7e5.etc2.ctex"]
 
 [params]
 

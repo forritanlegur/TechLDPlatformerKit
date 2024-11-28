@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://72ldk18ropuj" path="res://models/props/Textures/colormap.png" id="2_kee4l"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_btx2q"]
-size = Vector3(0.976929, 1.83865, 0.277344)
+size = Vector3(0.976929, 2.8487, 0.277344)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_slhpo"]
 resource_name = "colormap"
@@ -52,7 +52,7 @@ transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
 [node name="StaticBody3D" type="StaticBody3D" parent="fence-straight" index="0"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="fence-straight/StaticBody3D" index="0"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.000305176, 0.59967, 0.361328)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.000305176, 0.985161, 0.361328)
 shape = SubResource("BoxShape3D_btx2q")
 
 [node name="fence-straight2" type="MeshInstance3D" parent="." index="1"]
@@ -74,5 +74,5 @@ skeleton = NodePath("")
 [node name="StaticBody3D" type="StaticBody3D" parent="fence-straight3" index="0"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="fence-straight3/StaticBody3D" index="0"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.000305176, 0.416366, 0.361328)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.000305176, 0.738176, 0.361328)
 shape = SubResource("BoxShape3D_btx2q")

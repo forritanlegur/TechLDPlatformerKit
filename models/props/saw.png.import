@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://be614e8getrol"
 path.s3tc="res://.godot/imported/saw.png-2bd9be21d0d7996ddc1bb4ae44ba1f9c.s3tc.ctex"
+path.etc2="res://.godot/imported/saw.png-2bd9be21d0d7996ddc1bb4ae44ba1f9c.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://models/props/saw.png"
-dest_files=["res://.godot/imported/saw.png-2bd9be21d0d7996ddc1bb4ae44ba1f9c.s3tc.ctex"]
+dest_files=["res://.godot/imported/saw.png-2bd9be21d0d7996ddc1bb4ae44ba1f9c.s3tc.ctex", "res://.godot/imported/saw.png-2bd9be21d0d7996ddc1bb4ae44ba1f9c.etc2.ctex"]
 
 [params]
 

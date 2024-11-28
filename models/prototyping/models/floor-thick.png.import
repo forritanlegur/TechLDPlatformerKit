@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://6r7iuh6pbwqv"
 path.s3tc="res://.godot/imported/floor-thick.png-30ab18fe651ff2f8dfcb6050c8f7916a.s3tc.ctex"
+path.etc2="res://.godot/imported/floor-thick.png-30ab18fe651ff2f8dfcb6050c8f7916a.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://models/prototyping/models/floor-thick.png"
-dest_files=["res://.godot/imported/floor-thick.png-30ab18fe651ff2f8dfcb6050c8f7916a.s3tc.ctex"]
+dest_files=["res://.godot/imported/floor-thick.png-30ab18fe651ff2f8dfcb6050c8f7916a.s3tc.ctex", "res://.godot/imported/floor-thick.png-30ab18fe651ff2f8dfcb6050c8f7916a.etc2.ctex"]
 
 [params]
 

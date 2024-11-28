@@ -1,0 +1,42 @@
+[gd_scene load_steps=6 format=3 uid="uid://dlcvruolw3k4i"]
+
+[ext_resource type="Texture2D" uid="uid://bq20xfc26n7qx" path="res://sprites/mountainrange.png" id="1_fi16r"]
+[ext_resource type="Material" uid="uid://bov0x6deoh7gg" path="res://Mountainrange.tres" id="1_mnfco"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jucy6"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dc7l4"]
+next_pass = SubResource("StandardMaterial3D_jucy6")
+transparency = 1
+albedo_color = Color(1, 1, 1, 0)
+albedo_texture = ExtResource("1_fi16r")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_mve5v"]
+material = SubResource("StandardMaterial3D_dc7l4")
+
+[node name="Mountainrange" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(9.67, 0, 0, 0, 5, 0, 0, 0, 5, 0, 0, 0)
+material_override = ExtResource("1_mnfco")
+mesh = SubResource("PlaneMesh_mve5v")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+transform = Transform3D(9.67, 0, 0, 0, 5, 0, 0, 0, 5, 19, 0, 0)
+material_override = ExtResource("1_mnfco")
+mesh = SubResource("PlaneMesh_mve5v")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="."]
+transform = Transform3D(9.67, 0, 0, 0, 5, 0, 0, 0, 5, -19, 0, 0)
+material_override = ExtResource("1_mnfco")
+mesh = SubResource("PlaneMesh_mve5v")
+
+[node name="MeshInstance3D6" type="MeshInstance3D" parent="."]
+transform = Transform3D(9.67, 0, 0, 0, 5, 0, 0, 0, 5, 38, 0, 0)
+material_override = ExtResource("1_mnfco")
+mesh = SubResource("PlaneMesh_mve5v")
+
+[node name="MeshInstance3D7" type="MeshInstance3D" parent="."]
+transform = Transform3D(9.67, 0, 0, 0, 5, 0, 0, 0, 5, 57, 0, 0)
+material_override = ExtResource("1_mnfco")
+mesh = SubResource("PlaneMesh_mve5v")

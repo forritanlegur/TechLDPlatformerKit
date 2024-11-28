@@ -1,0 +1,36 @@
+[gd_scene load_steps=7 format=3 uid="uid://dqh2dv4urod1w"]
+
+[ext_resource type="PackedScene" uid="uid://duqfd836kg7tm" path="res://models/props/block-snow-curve.glb" id="1_ll4jw"]
+[ext_resource type="PackedScene" uid="uid://ctsyh8fjntx7y" path="res://models/props/door-rotate-large.glb" id="2_0xmsl"]
+[ext_resource type="PackedScene" uid="uid://bcelcc2hak4kr" path="res://models/prototyping/models/column-low.glb" id="4_jv4os"]
+[ext_resource type="PackedScene" uid="uid://brg64eln7l7wv" path="res://models/core_models/dust.glb" id="4_o8p6h"]
+[ext_resource type="PackedScene" uid="uid://cjohjf4elt53r" path="res://models/prototyping/models/crate.glb" id="5_vaemf"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_cksxv"]
+size = Vector3(1.91101, 1.2041, 1)
+
+[node name="block-snow-curve2" instance=ExtResource("1_ll4jw")]
+
+[node name="block-snow-curve" parent="." index="0"]
+transform = Transform3D(2, 0.000397166, -0.000396317, -0.000397002, 2, 0.000713402, 0.000396481, -0.000713311, 2, 0, 0, 0.415134)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="block-snow-curve" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="block-snow-curve/StaticBody3D" index="0"]
+transform = Transform3D(1, 2.33651e-09, 0, -2.33986e-09, 1, 4.68572e-09, 0, 0, 1, -0.0459595, 0.57959, 0)
+shape = SubResource("BoxShape3D_cksxv")
+
+[node name="door-rotate-large2" parent="." index="1" instance=ExtResource("2_0xmsl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.010218, 0, 1.2499)
+
+[node name="cloud" parent="." index="2" instance=ExtResource("4_o8p6h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.05112, 2.37352, 0.715614)
+
+[node name="column-low2" parent="." index="3" instance=ExtResource("4_jv4os")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -1.05409, 1.1244, 0.720096)
+
+[node name="crate2" parent="." index="4" instance=ExtResource("5_vaemf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.976743, 0.285435, 1.07199)
+
+[node name="crate3" parent="." index="5" instance=ExtResource("5_vaemf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.02326, 0.285435, 1.07199)
