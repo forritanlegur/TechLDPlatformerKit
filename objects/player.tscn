@@ -11,7 +11,7 @@ radius = 0.3
 height = 1.0
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_wmioh"]
-size = Vector3(0.25, 0.469604, 0.25)
+size = Vector3(0.777832, 0.469604, 0.25)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_q7stj"]
 diffuse_mode = 2
@@ -43,7 +43,7 @@ collision_layer = 4
 monitoring = false
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Character/ButtonPresserArea3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.109802, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0012207, 0.109802, 0)
 shape = SubResource("BoxShape3D_wmioh")
 
 [node name="Shadow" type="Decal" parent="."]

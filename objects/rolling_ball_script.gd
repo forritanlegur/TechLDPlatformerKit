@@ -12,10 +12,10 @@ var scale_speed = 0.1
 
 # ,min velocity for ball to grow. Currently when the ball is still it experiences a bit above zero.but underone.
 var velocity_threshold = 1.0
-var scale_increment = 0.05
+var scale_increment = 0.08
 
 # current scale 
-var current_scale = min_scale
+@export var current_scale = min_scale
 
 #The weight to be used by the scale
 @export var snowballWeight = 1
