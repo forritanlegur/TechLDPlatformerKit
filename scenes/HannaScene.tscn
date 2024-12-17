@@ -1672,6 +1672,12 @@ transform = Transform3D(0.939848, 0, -0.341594, 0, 1, 0, 0.341594, 0, 0.939848, 
 [node name="wheelchair2" parent="." instance=ExtResource("47_lkbsb")]
 transform = Transform3D(0.669494, 0, -0.742818, 0, 1, 0, 0.742818, 0, 0.669494, 16.8752, 0.971158, 31.8512)
 
+[node name="Node3D7" parent="." instance=ExtResource("30_8oxv6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.24699, 1.01328, 39.8552)
+
+[node name="Node3D8" parent="." instance=ExtResource("30_8oxv6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.24699, 1.01328, 45.2852)
+
 [connection signal="coin_collected" from="Player" to="HUD" method="_on_coin_collected"]
 [connection signal="reached_goal" from="Player" to="HUD" method="_on_player_reached_goal"]
 [connection signal="pressed" from="HUD/Control/PlayAgainButton" to="HUD" method="_on_play_again_button_pressed"]

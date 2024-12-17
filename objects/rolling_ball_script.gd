@@ -12,7 +12,7 @@ var scale_speed = 0.1
 
 # ,min velocity for ball to grow. Currently when the ball is still it experiences a bit above zero.but underone.
 var velocity_threshold = 1.0
-var scale_increment = 0.08
+var scale_increment = 0.06
 
 # current scale 
 @export var current_scale = min_scale
